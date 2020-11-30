@@ -10,6 +10,7 @@ if (!env) {
     throw new Error("ENV not configured");
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const config: any = {
     ...env,
     root,

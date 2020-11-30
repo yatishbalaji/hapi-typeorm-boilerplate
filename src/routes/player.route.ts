@@ -1,7 +1,7 @@
 import { Server } from "@hapi/hapi";
 import { getPlayer, getPlayers, savePlayer } from '../controllers/player.controller';
 
-export const playerRoute = (server: Server) => {
+export const playerRoute = (server: Server): void => {
     server.route([{
         method: 'GET',
         path: '/player/{id}',
