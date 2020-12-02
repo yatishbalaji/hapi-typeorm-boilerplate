@@ -1,4 +1,5 @@
 import { Request, ResponseObject, ResponseToolkit } from "@hapi/hapi";
+
 import { getCustomRepository } from "typeorm";
 import { Player, PlayerRepository } from "../repositories";
 
@@ -6,7 +7,6 @@ export const getPlayers = async (): Promise<Player[]> => {
     try {
         // const connection = getConnection("wcms");
         // const data = await connection.getRepository(Player).find();
-
         const data = await getCustomRepository(PlayerRepository, "wcms").find();
 
         return data;
